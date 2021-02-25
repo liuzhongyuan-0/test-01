@@ -1,50 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <ul>
-        <li>赵露思</li>
-        <li>杨超越</li>
-        <li>佟丽娅</li>
-        <li>宋江</li>
-    </ul>
-    <button>点我</button>
-    <script>
-        var btn = document.querySelector('button');
-        var ul = document.querySelector('ul');
-        var li = document.querySelector('li');
-        //事件委托，不再需要利用for循环得到所有li
-        ul.onclick = function (evt) {
-            evt.target.style.backgroundColor = 'green';
-        }
-
-        btn.onclick = function () {
-            var a = 0;
-            var newli = document.createElement('li');
-            newli.innerHTML = '赵露思真漂亮！'
-            ul.insertBefore(newli, ul.children[0])
-            a++;
-            if (a == 1) {
-                //点击一次之后删除点击事件
-                btn.onclick = null;
-            }
-        }
-        //ul禁止选中文字进行复制
-        ul.onselectstart = function (evt) {
-            //清除默认行为
-            evt.preventDefault()
-        }
-        //ul禁止点击右键弹出菜单 
-        ul.oncontextmenu = function (evt) {
-            evt.preventDefault()
-        }
-    </script>
+    
 </body>
-
 </html>
