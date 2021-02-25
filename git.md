@@ -25,3 +25,17 @@ git status
 git status -s
 ```
 
+## 5.撤销对文件的修改
+
+```shell
+git checkout -- 文件名
+```
+
+## 6.一次性添加多个文件到仓库
+
+```shell
+git add .
+```
+
+
+
