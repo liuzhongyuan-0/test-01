@@ -10,6 +10,7 @@ git init
 
 ```shell
 git add 文件名
+git add .
 ```
 
 ## 3.文件提交到仓库
@@ -31,10 +32,32 @@ git status -s
 git checkout -- 文件名
 ```
 
-## 6.一次性添加多个文件到仓库
+## 6.把暂存区的文件移除
 
 ```shell
-git add .
+git reset HEAD 文件名
+git reset HEAD .
+```
+
+## 7.跳过暂存区，直接提交到仓库
+
+```shell
+git sommit -a am "文件描述" 
+```
+
+## 8.移除文件
+
+```shell
+# 从 Git仓库和工作区中同时移除 index.js 文件
+git rm -f index.js
+# 只从 Git 仓库中移除 index.css，但保留工作区中的 index.css 文件
+git rm --cached index.css
+```
+
+## 9.查看历史记录
+
+```shell
+git log
 ```
 
 
